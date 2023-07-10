@@ -10,7 +10,7 @@ export default function TodeElement(props) {
     const [edit, setEdit] = useState(false)
     const [editValue, setEditValue] = useState()
 
-    const url = "https://todo-app-server-eta.vercel.app/"
+    const url = "https://todo-app-server-eta.vercel.app"
 
     const dispatch = useDispatch()
 
@@ -75,12 +75,12 @@ export default function TodeElement(props) {
 
                 <div className="complete-button-wrapper">
                     {/* If edit is true it show the save button and if false the complete button, which will delete the todo */}
-                    {edit ? <button onClick={() => saveEdit(props.id, props.token)}>Save</button> : <button onClick={() => handleDelete(props.id, props.token)}>Complete</button>}
+                    {edit && edit ? <button onClick={() => saveEdit(props.id, props.token)}>Save</button> : <button onClick={() => handleDelete(props.id, props.token)}>Complete</button>}
                 </div>
             
                 <div className="edit-button-wrapper">
                     {/* If edit is true it show the cancel button and if false the edit button, which will change the details text to an inpu and allow the user to edit the todo */}
-                    {edit ? <button onClick={() => setEdit(false)}>Cancel</button> : <button onClick={() => setEdit(true)}>Edit</button>}
+                    {edit && edit ? <button onClick={() => setEdit(false)}>Cancel</button> : <button onClick={() => setEdit(true)}>Edit</button>}
 
                 </div>
 
