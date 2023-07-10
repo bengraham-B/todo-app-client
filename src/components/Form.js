@@ -12,6 +12,8 @@ export default function Form() {
 	const [token, setToken] = useState()
     const [todoPost, setTodoPost] = useState()
 
+    const url = "https://todo-app-server-eta.vercel.app/"
+
     useEffect(() => {
         if(localStorage.getItem("user-l3t10")){
             const userJWT = JSON.parse(localStorage.getItem("user-l3t10"))
@@ -23,7 +25,7 @@ export default function Form() {
 
     const addTodo = async () =>{
 
-        const postTodo = await fetch("https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/todos", {
+        const postTodo = await fetch(url + "/api/todos", {
             method: "POST",
             body: JSON.stringify({details: todoPost}),
             headers: {

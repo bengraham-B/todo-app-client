@@ -13,7 +13,8 @@ import Form from '../components/Form'
 //^ Importing Components
 import TodeElement from '../components/TodeElement'
 
-const url = "https://todo-app-server-lhald1isv-bengraham-b.vercel.app/"
+const url = "https://todo-app-server-eta.vercel.app/"
+
 
 export default function Home() {
     const refreshCountRedux = useSelector((state) => state.todo.refreshCount)

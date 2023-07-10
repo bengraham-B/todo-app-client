@@ -10,10 +10,12 @@ export default function TodeElement(props) {
     const [edit, setEdit] = useState(false)
     const [editValue, setEditValue] = useState()
 
+    const url = "https://todo-app-server-eta.vercel.app/"
+
     const dispatch = useDispatch()
 
     const handleDelete = async (id, token) => {
-        const todo = await fetch(`https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/todos/${id}`, {
+        const todo = await fetch(url + `/api/todos/${id}`, {
             method:"DELETE",
             
 			headers: {

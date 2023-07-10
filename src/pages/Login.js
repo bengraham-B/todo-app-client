@@ -5,17 +5,13 @@ export default function Login() {
     const [password, setPassword] = useState()
     const [error, setError] = useState(null)
 
-
+    const url = "https://todo-app-server-eta.vercel.app/"
     
     const handleLogin = async () => {
         setError(null)
 
-        const url = "https://todo-app-server-lhald1isv-bengraham-b.vercel.app/"
-
-
-
         try {
-            const response = await fetch("https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/user/login", {
+            const response = await fetch(url + "/api/user/login", {
                 method: "POST",
                 body: JSON.stringify({
                         email: email,
