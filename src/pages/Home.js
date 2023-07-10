@@ -13,6 +13,8 @@ import Form from '../components/Form'
 //^ Importing Components
 import TodeElement from '../components/TodeElement'
 
+const url = "https://todo-app-server-lhald1isv-bengraham-b.vercel.app/"
+
 export default function Home() {
     const refreshCountRedux = useSelector((state) => state.todo.refreshCount)
 
@@ -21,7 +23,7 @@ export default function Home() {
 	useEffect(() => {
 		async function fetchTodos(token){
 
-			const todo = await fetch("http://localhost:8002/api/todos", {
+			const todo = await fetch(url + "/api/todos", {
 				method: "GET",
 				headers: {
 					'Content-Type': 'application/json',

@@ -10,9 +10,12 @@ export default function Login() {
     const handleLogin = async () => {
         setError(null)
 
+        const url = "https://todo-app-server-lhald1isv-bengraham-b.vercel.app/"
+
+
 
         try {
-            const response = await fetch("http://localhost:8002/api/user/login", {
+            const response = await fetch("https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/user/login", {
                 method: "POST",
                 body: JSON.stringify({
                         email: email,

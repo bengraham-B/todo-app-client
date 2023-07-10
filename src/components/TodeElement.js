@@ -13,7 +13,7 @@ export default function TodeElement(props) {
     const dispatch = useDispatch()
 
     const handleDelete = async (id, token) => {
-        const todo = await fetch(`http://localhost:8002/api/todos/${id}`, {
+        const todo = await fetch(`https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/todos/${id}`, {
             method:"DELETE",
             
 			headers: {

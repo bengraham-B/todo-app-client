@@ -16,7 +16,7 @@ export default function Login() {
 
         try {
             //^ Sending the payload to backend
-            const response = await fetch("http://localhost:8002/api/user/signup", {
+            const response = await fetch("https://todo-app-server-lhald1isv-bengraham-b.vercel.app/api/user/signup", {
             method: "POST",
             body: JSON.stringify({
                     email: email,
