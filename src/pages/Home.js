@@ -62,7 +62,7 @@ export default function Home() {
 			{userAuthStatus ? <Form/> : <h2>Must Be Signed In</h2>}
 
 			<div className="todo-container">
-				{todos.map((todo) => (
+				{todos && todos.map((todo) => (
 					<TodeElement id={todo._id} token={token} details={todo.details} createdAt={todo.createdAt}/>
 				))}
 
