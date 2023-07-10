@@ -12,7 +12,7 @@ export default function Form() {
 	const [token, setToken] = useState()
     const [todoPost, setTodoPost] = useState()
 
-    const url = "https://todo-app-server-eta.vercel.app/"
+    const url = "https://todo-app-server-eta.vercel.app"
 
     useEffect(() => {
         if(localStorage.getItem("user-l3t10")){

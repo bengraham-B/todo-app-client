@@ -13,7 +13,7 @@ import Form from '../components/Form'
 //^ Importing Components
 import TodeElement from '../components/TodeElement'
 
-const url = "https://todo-app-server-eta.vercel.app/"
+const url = "https://todo-app-server-eta.vercel.app"
 
 
 export default function Home() {
