@@ -6,7 +6,7 @@ export default function Login() {
     const [password, setPassword] = useState()
     const [error, setError] = useState()
 
-    const url = "https://todo-app-server-eta.vercel.app/"
+    const url = "https://todo-app-server-eta.vercel.app"
 
     const handleSignup = async () => {
         setError(null)
