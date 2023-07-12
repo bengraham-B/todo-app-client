@@ -11,6 +11,7 @@ export default function TodeElement(props) {
     const [editValue, setEditValue] = useState()
 
     const url = "https://todo-app-server-eta.vercel.app"
+    const url2 = "http://localhost:3000/api/todos"
 
     const dispatch = useDispatch()
 
@@ -37,7 +38,7 @@ export default function TodeElement(props) {
     const saveEdit = async (id_edit, token) => {
         console.log("id_edit", id_edit)
        
-        const todoEdit = await fetch(`http://localhost:8002/api/todos/${id_edit}`, {
+        const todoEdit = await fetch(`${url}/api/todos/${id_edit}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`,
